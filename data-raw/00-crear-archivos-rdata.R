@@ -11,7 +11,7 @@ n <- tolower(gsub('\\.tsv','',n))
 
 try(dir.create('inst'))
 try(dir.create('inst/extdata'))
-con <- dbConnect(SQLite(), "data-raw/eod2017.sqlite")
+con <- dbConnect(SQLite(), "inst/extdata/eod2017.sqlite")
 
 for (i in seq_along(finp)) {
   d <- read_delim(finp[i], delim = '\\t')
