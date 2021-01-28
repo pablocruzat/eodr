@@ -10,7 +10,7 @@ n <- gsub('_|[0-9]','', n)
 n <- tolower(gsub('\\.tsv','',n))
 
 try(dir.create('inst'))
-try(dir.create('inst/data'))
+try(dir.create('inst/extdata'))
 con <- dbConnect(SQLite(), "data-raw/eod2017.sqlite")
 
 for (i in seq_along(finp)) {
